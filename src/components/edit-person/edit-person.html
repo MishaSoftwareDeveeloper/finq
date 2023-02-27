@@ -1,0 +1,20 @@
+
+<section class="edit-person">
+  <button @click="back()">Back</button>
+  <div class="person">
+    <div>Gender: {{this.person.gender}}</div>
+    <div>Name: {{this.person.name.first}} <input type="text" v-model="person.name.first"/></div>
+    <div>Age: {{this.person.dob.age}}</div>
+    <div>Date of birth: {{this.person.dob.date}}</div>
+    <div class="props">Address: 
+        <div>Street: {{this.person.location.street.name}} {{this.person.location.street.number}}</div>
+        <div>City: {{this.person.location.city}}</div>
+        <div>State: {{this.person.location.state}}</div>
+    </div>
+    <div class="props">Contact:
+      <div>Email:{{this.person.email}}</div>
+      <div>Phone: {{this.person.phone}}</div>
+    </div>
+  </div>
+</section>
+

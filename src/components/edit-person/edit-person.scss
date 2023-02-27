@@ -1,0 +1,17 @@
+.edit-person {
+    .person{
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        text-align:start;
+        div{
+            margin-bottom: 10px;
+        }
+        .props{
+            div{
+                margin-left:20px;
+            }
+        }
+    }
+
+}

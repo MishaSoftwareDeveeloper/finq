@@ -1,0 +1,59 @@
+.persons {
+    .fetch{
+        margin-bottom: 20px;
+    }
+    button:hover{
+       cursor: pointer;
+    }
+
+    .grid{
+        width:100%;
+        max-width: 1600px;
+        display:flex;
+        flex-direction: column;
+        background-color: lightgrey;
+        padding: 10px;
+        .columns{
+            display: flex;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            .column{
+                display: flex;
+                flex-direction: column;
+                width:100%;
+                max-width: 200px;
+                text-align: center;
+                padding: 20px;
+                border: 1px solid rgba(0, 0, 0, 0.8);
+            }
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            background-color: whitesmoke;
+            border: 1px solid rgba(0, 0, 0, 0.8);
+          
+            font-size: 20px;
+            text-align: center;
+            .cell{
+                width: 100%;
+                max-width: 200px;
+                text-align: center;
+                padding: 20px;
+                overflow: hidden;
+                border-right: 1px solid rgba(0, 0, 0, 0.8);
+                img{
+                    height: 70px;
+                    width: 70px;
+                }
+
+                button{
+                    margin: auto;
+         
+                }
+            }
+          
+
+          }
+    }
+}

@@ -1,0 +1,33 @@
+
+<section class="persons">
+  <button class="fetch" @click="getData">fetch</button>
+  <div v-show="persons.length>0" class="grid">
+    <div class="columns">
+      <div class="column"><button @click="onClearFilter">clear filter</button></div>
+      <div class="column">Name
+        <input type="text" @input="filterByName($event.target.value)"/>
+      </div>
+      <div class="column">Gender</div>
+      <div class="column">Country
+        <input type="text" @input="filterByCountry($event.target.value)"/>
+      </div>
+      <div class="column">Phone</div>
+      <div class="column">Email</div>
+      <div class="column"></div>
+    </div>
+    <div class="row" v-for="(p, index) in persons" :key="index">
+        <div class="cell"><img v-bind:src="p.picture.thumbnail"/></div>
+        <div class="cell">
+            <div>{{p.name.title}}</div>
+            <div>{{p.name.first}} </div>
+            <div>{{p.name.last}}</div>
+          </div>
+        <div class="cell">{{p.gender}}</div>
+        <div class="cell">{{p.location.country}}</div>
+        <div class="cell">{{p.phone}}</div>
+        <div class="cell">{{p.email}}</div>
+        <div class="cell"><button @click="editPerson(p)">edit person</button></div>
+    </div>
+  </div>
+</section> 
+
